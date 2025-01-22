@@ -12,7 +12,7 @@ O objetivo principal deste repositório é documentar e compartilhar o processo 
 ## 📋 Descrição dos Componentes
 
 - **Pasta `semX-licaoY/`**: 
-  - Cada pasta representa uma lição específica do semestre `X` e lição `Y`, organizando os arquivos relacionados de forma coesa.
+  - Cada pasta representa uma lição específica da semana `X` e lição `Y` do livro, organizando os arquivos relacionados de forma coesa.
   
 - **Arquivo `projectZ.py`**: 
   - Contém o código Python desenvolvido para o projeto Z daquela lição.
@@ -45,7 +45,9 @@ O objetivo principal deste repositório é documentar e compartilhar o processo 
   
 - **Adaptação para Outros Projetos:**
   - Caso novos projetos sejam adicionados na mesma lição, mantenha a convenção de nomes para facilitar o versionamento e organização.
-
+- **Executar no vscode**
+  - É necessário instalar as extensões relacionadas ao [raspberry](https://marketplace.visualstudio.com/items?itemName=paulober.pico-w-go). 
+    - "To run your program, run > MicroPico > Run current file on Pico in your Python file's tab. You can also use the status bar button "Run " at the bottom of VS Code window."
 ---
 
 ## 📚 Referências
