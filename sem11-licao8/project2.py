@@ -5,44 +5,44 @@ from utime import sleep
 
 buzzer = PWM(Pin(27))
 
-SEMIBREVE = 0.4
-MINIMA = 0.2
-SEMINIMA = 0.1
-COLCHEIA = 0.05
-SEMICOLCHEIA = 0.025
+SEMIBREVE = 0.4*4
+MINIMA = 0.2*4
+SEMINIMA = 0.1*4
+COLCHEIA = 0.05*4
+SEMICOLCHEIA = 0.025*4
 
 
-def DO(time=1, volume=1000):
+def DO(time=1, volume=2000):
     buzzer.freq(1046)
     buzzer.duty_u16(volume)
     sleep(time)
 
-def RE(time=1, volume=1000):
+def RE(time=1, volume=2000):
     buzzer.freq(1175)
     buzzer.duty_u16(volume)
     sleep(time)
 
-def MI(time=1, volume=1000):
+def MI(time=1, volume=2000):
     buzzer.freq(1318)
     buzzer.duty_u16(volume)
     sleep(time)
 
-def FA(time=1, volume=1000):
+def FA(time=1, volume=2000):
     buzzer.freq(1397)
     buzzer.duty_u16(volume)
     sleep(time)
 
-def SOL(time=1, volume=1000):
+def SOL(time=1, volume=2000):
     buzzer.freq(1568)
     buzzer.duty_u16(volume)
     sleep(time)
 
-def LA(time=1, volume=1000):
+def LA(time=1, volume=2000):
     buzzer.freq(1760)
     buzzer.duty_u16(volume)
     sleep(time)
 
-def SI(time=1, volume=1000):
+def SI(time=1, volume=2000):
     buzzer.freq(1967)
     buzzer.duty_u16(volume)
     sleep(time)
@@ -59,6 +59,18 @@ marchaSoldado = [
                 (FA,COLCHEIA),(RE,COLCHEIA),(SOL,SEMINIMA),(SOL,COLCHEIA),(SOL,COLCHEIA),(LA,COLCHEIA),
                 (SOL,COLCHEIA),(FA,COLCHEIA),(MI,COLCHEIA),(RE,COLCHEIA),(DO,SEMINIMA)
                  ]
+
+piratasDoCaribe = [
+    (SOL, SEMINIMA), (SOL, SEMINIMA), (SOL, SEMINIMA), (MI, SEMINIMA),
+    (DO, SEMINIMA), (RE, SEMINIMA), (MI, SEMINIMA), (DO, SEMINIMA),
+    (SOL, SEMINIMA), (SOL, SEMINIMA), (SOL, SEMINIMA), (MI, SEMINIMA),
+    (DO, SEMINIMA), (RE, SEMINIMA), (MI, SEMINIMA), (DO, SEMINIMA),
+    (SOL, SEMINIMA), (SOL, SEMINIMA), (SOL, SEMINIMA), (MI, SEMINIMA),
+    (DO, SEMINIMA), (RE, SEMINIMA), (MI, SEMINIMA), (DO, SEMINIMA),
+    (SOL, SEMINIMA), (SOL, SEMINIMA), (SOL, SEMINIMA), (MI, SEMINIMA),
+    (DO, SEMINIMA), (RE, SEMINIMA), (MI, SEMINIMA), (DO, SEMINIMA)
+]
+
 melodyPiratasCaribe = [
     (MI, 0.4), (SOL, 0.4), (LA, 0.2), (SOL, 0.2),
     (MI, 0.4), (SOL, 0.4), (LA, 0.2), (SI, 0.6),

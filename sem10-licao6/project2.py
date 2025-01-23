@@ -2,7 +2,7 @@ from machine import ADC,Pin
 from utime import sleep
 
 led = Pin(16, Pin.OUT)
-SENSOR_PIN = ADC(0)
+SENSOR_PIN = ADC(1)
 
 while True:
     print(SENSOR_PIN.read_u16())

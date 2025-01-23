@@ -1,10 +1,9 @@
 from machine import ADC,Pin, PWM
 from utime import sleep
 
-PACE= 50
+PACE= 250
 TIMEOUT = 0.01
 led = PWM(Pin(18))
-SENSOR_PIN = ADC(0)
 
 led.freq(500)
 val=0
