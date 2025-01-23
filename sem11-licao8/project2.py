@@ -5,6 +5,11 @@ from utime import sleep
 
 buzzer = PWM(Pin(27))
 
+SEMIBREVE = 0.4
+MINIMA = 0.2
+SEMINIMA = 0.1
+COLCHEIA = 0.05
+SEMICOLCHEIA = 0.025
 
 
 def DO(time=1, volume=1000):
@@ -46,6 +51,14 @@ def END(time=1):
     buzzer.duty_u16(0)
     sleep(time)
     
+
+marchaSoldado = [
+                (SOL,SEMINIMA), (SOL,COLCHEIA), (MI,COLCHEIA),(DO, SEMINIMA),
+                (DO, COLCHEIA),(MI,COLCHEIA),(SOL,COLCHEIA),(SOL,COLCHEIA),(SOL,COLCHEIA),
+                (MI,COLCHEIA),(RE,SEMINIMA),(MI,COLCHEIA),(FA,COLCHEIA), (FA,COLCHEIA),
+                (FA,COLCHEIA),(RE,COLCHEIA),(SOL,SEMINIMA),(SOL,COLCHEIA),(SOL,COLCHEIA),(LA,COLCHEIA),
+                (SOL,COLCHEIA),(FA,COLCHEIA),(MI,COLCHEIA),(RE,COLCHEIA),(DO,SEMINIMA)
+                 ]
 melodyPiratasCaribe = [
     (MI, 0.4), (SOL, 0.4), (LA, 0.2), (SOL, 0.2),
     (MI, 0.4), (SOL, 0.4), (LA, 0.2), (SI, 0.6),
@@ -55,6 +68,8 @@ melodyPiratasCaribe = [
     (DO, 0.4), (SI, 0.2), (LA, 0.4), (SOL, 0.2),
     (MI, 0.6), (SOL, 0.6), (MI, 0.6)
 ]
+
+
 
 musicaExercicio8 = [(DO,0.25), (RE,0.25), (MI,0.25),
                     (DO,0.25), (END,0.01),(DO,0.25),
